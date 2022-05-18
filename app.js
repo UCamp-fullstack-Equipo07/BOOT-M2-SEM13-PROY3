@@ -1,4 +1,4 @@
-const getData = async () => {
+const getData = async() => {
     const url = 'https://travelbriefing.org/Afghanistan?format=json';
     const res = await fetch(url);
     const data = await res.json();
@@ -20,27 +20,26 @@ const setGraph = (weather) => {
 
     const wTempData = {
         labels: wLabels,
-        datasets: [
-            {
-            label: 'Temperatura Minima',
-            data: wTempMin,
-            borderColor: 'red',
-            backgroundColor: 'white',
+        datasets: [{
+                label: 'Temperatura Minima',
+                data: wTempMin,
+                borderColor: 'red',
+                backgroundColor: 'white',
             },
             {
-            label: 'Temperatura Promedio',
-            data: wTempAvg,
-            borderColor: 'blue',
-            backgroundColor: 'white',
+                label: 'Temperatura Promedio',
+                data: wTempAvg,
+                borderColor: 'blue',
+                backgroundColor: 'white',
             },
             {
-            label:'Temperatura Maxima',
-            data: wTempMax,
-            borderColor: 'yellow',
-            backgroundColor: 'white',
+                label: 'Temperatura Maxima',
+                data: wTempMax,
+                borderColor: 'yellow',
+                backgroundColor: 'white',
             }
         ]
-        };
+    };
 
     const configTempChart = {
         type: 'line',
@@ -48,13 +47,13 @@ const setGraph = (weather) => {
         options: {
             responsive: true,
             plugins: {
-            legend: {
-                position: 'bottom',
-            },
-            title: {
-                display: true,
-                text: 'Chart.js Line Chart'
-            }
+                legend: {
+                    position: 'bottom',
+                },
+                title: {
+                    display: true,
+                    text: 'Chart.js Line Chart'
+                }
             }
         },
     };
@@ -67,27 +66,26 @@ const setGraph = (weather) => {
     //Precipitation Chart
     const wPreData = {
         labels: wLabels,
-        datasets: [
-            {
-            label: 'Precipitacion Minima',
-            data: wPreMin,
-            borderColor: 'red',
-            backgroundColor: 'white',
+        datasets: [{
+                label: 'Precipitacion Minima',
+                data: wPreMin,
+                borderColor: 'red',
+                backgroundColor: 'white',
             },
             {
-            label: 'Precipitacion Promedio',
-            data: wPreAvg,
-            borderColor: 'blue',
-            backgroundColor: 'white',
+                label: 'Precipitacion Promedio',
+                data: wPreAvg,
+                borderColor: 'blue',
+                backgroundColor: 'white',
             },
             {
-            label:'Precipitacion Maxima',
-            data: wPreMax,
-            borderColor: 'yellow',
-            backgroundColor: 'white',
+                label: 'Precipitacion Maxima',
+                data: wPreMax,
+                borderColor: 'yellow',
+                backgroundColor: 'white',
             }
         ]
-        };
+    };
 
     const configPreChart = {
         type: 'line',
@@ -95,13 +93,13 @@ const setGraph = (weather) => {
         options: {
             responsive: true,
             plugins: {
-            legend: {
-                position: 'bottom',
-            },
-            title: {
-                display: true,
-                text: 'Chart.js Line Chart'
-            }
+                legend: {
+                    position: 'bottom',
+                },
+                title: {
+                    display: true,
+                    text: 'Chart.js Line Chart'
+                }
             }
         },
     };
@@ -122,14 +120,14 @@ const setMap = (maps) => {
     const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 4,
         center: myLatLng,
-      });
-    
+    });
+
     new google.maps.Marker({
         position: myLatLng,
         map,
         title: "Hello World!",
     });
-} 
+}
 
 
 getData();

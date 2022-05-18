@@ -6,23 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Proyecto-3 equipo-7</title>
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <nav class="navbar">
-            <a href="index.html">
-                    Inicio
-                </a>
-            <a href="./books/Galeria.html">
-                    Galeria
-                </a>
+            <a href="#pagina">
+                <img class="logo" src="./assets/logo72.png">
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="./index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./content/seccionGrafica.html" class="nav-link">Travel API</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
-        <div class="header__log">
-            <img src="https://m.media-amazon.com/images/I/51vAYAXTVkL._AC_.jpg" alt="logo">
-        </div>
     </header>
 
     <main>
@@ -33,6 +43,7 @@
     </footer>
 
     <script src="./app.js"></script>
+    <script src="./JS/menuJS.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly" defer></script>
 </body>
