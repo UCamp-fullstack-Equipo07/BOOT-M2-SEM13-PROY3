@@ -43,8 +43,8 @@
         <section id="seccionBuscar">
             <div class="wrap">
                 <div class="search">
-                    <input type="text" class="searchTerm" placeholder="Lugar de destino...">
-                    <button type="submit" class="searchButton">
+                    <input id="ciudad" type="text" class="searchTerm" placeholder="Lugar de destino...">
+                    <button type="submit" class="searchButton" id="boton" onclick="banderas()">
                      <i class="fa fa-search"></i>
                   </button>
                 </div>
@@ -87,12 +87,11 @@
                         <h2 class="article-body-title1">Localidad</h2>
                         <p class="article-body-p1"></p>
                     </div>
-                    <div>
-                        <img id="imgBandera" src="http://www.tamaulipas.gob.mx/fomentocivico/wp-content/uploads/sites/20/2017/04/bandera-mexico-portavox-e1492461746506.jpg">
+                    <div id="bandera-ver">
+                    
+                       
                     </div>
-                    <div>
-                        <label>Nombre del país</label>
-                    </div>
+               
                 </section>
             </section>
 

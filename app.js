@@ -108,9 +108,50 @@ const setGraph = (weather) => {
         document.getElementById('myChartPre'),
         configPreChart
     );
-
 }
 
+/*Banderas*/
+const banderas = async () => {
+    let city = document.getElementById('ciudad').value
+    const url = `https://restcountries.com/v3.1/name/${city === '' ? 'Mexico' : city}`
+    const res = await fetch(url);
+    const data = await res.json();
+    console.log(data)
+
+    let container = document.getElementById('bandera-ver')
+    container.innerHTML= `
+
+
+    <div id="ban">
+    <h4>Bandera:</h4>
+    <img src="${data[0].flags.png}"/>
+    </div>
+    <p>
+    <h4>Pais:</h4>
+    ${data[0].name.common}
+    </p>
+  
+    <p>
+    <h4>Capital:</h4>
+    ${data[0].capital[0]}
+    </p>
+
+    <p>
+    <h4>Continente:</h4>
+    ${data[0].continents[0]}
+    </p>
+    <p>
+    <p>
+    <h4>Mapa:</h4>
+    <a href="${data[0].maps.googleMaps}" target="_blank">Click</a>
+    </p>
+
+    `
+}
+
+
+
+/* Mapas :v
 const setMap = (maps) => {
     const myLat = Number(maps.lat);
     const myLon = Number(maps.long);
@@ -128,6 +169,7 @@ const setMap = (maps) => {
         title: "Hello World!",
     });
 }
-
+*/
 
 getData();
+banderas()
