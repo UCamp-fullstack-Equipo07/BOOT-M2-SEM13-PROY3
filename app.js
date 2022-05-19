@@ -122,26 +122,22 @@ const banderas = async () => {
     let container = document.getElementById('bandera-ver')
     container.innerHTML= `
 
-
     <div id="ban">
     <h4>Bandera:</h4>
     <br>
     <img src="${data[0].flags.png}"/>
     </div>
     <br>
-
     <p>
     <h4>Pais:</h4>
     ${data[0].name.common}
     </p>
     <br>
-
     <p>
     <h4>Capital:</h4>
     ${data[0].capital[0]}
     </p>
     <br>
-
     <p>
     <h4>Continente:</h4>
     ${data[0].continents[0]}
@@ -152,14 +148,11 @@ const banderas = async () => {
     ${data[0].area} m3
     </p>
     <br>
-
     <p>
     <h4>Poblacion:</h4>
     ${data[0].population} habitantes
     </p>
     <br>
-
-
     <p>
     <h4>Mapa:</h4>
     <a href="${data[0].maps.googleMaps}" target="_blank">Click</a>
