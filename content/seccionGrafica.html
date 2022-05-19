@@ -36,28 +36,39 @@
         </nav>
     </header>
     <main id="mainApi">
-        <section>
-
+        <section id="encabezadoApi">
+            <h1 id="titleEncabezado" class='lineUp'>VIAJA SEGURO Y CON TODO A LA MANO...</h1>
+            <p id="pEncabezado"> Navega con la app y busca toda la información de tus lugares favoritos alrededor del mundo<br>como la temperatura por meses, entre otros datos que te ayudarán a estar preparado durante tus viajes.</p>
+        </section>
+        <section id="seccionBuscar">
+            <div class="wrap">
+                <div class="search">
+                    <input type="text" class="searchTerm" placeholder="Lugar de destino...">
+                    <button type="submit" class="searchButton">
+                     <i class="fa fa-search"></i>
+                  </button>
+                </div>
+            </div>
         </section>
         <section>
             <section class="cajas">
                 <section class="caja-1">
-                    <div id="grafica-1">
-                        <canvas id="myChart"></canvas>
-                    </div>
                     <div class="article-body">
                         <h2 class="article-body-title1">Temperatura</h2>
                         <p class="article-body-p1">Análisis según el mes del año</p>
                     </div>
+                    <div id="grafica-1">
+                        <canvas id="myChart"></canvas>
+                    </div>
                 </section>
 
                 <section class="caja-2">
+                    <div class="article-body">
+                        <h2 class="article-body-title1">Precipitaciones</h2>
+                        <p class="article-body-p1">Estadisticas por mes</p>
+                    </div>
                     <div id="grafica-2">
                         <canvas id="myChartPre"></canvas>
-                    </div>
-                    <div class="article-body">
-                        <h2 class="article-body-title1">Sur</h2>
-                        <p class="article-body-p1">Estadisticas según INEGI</p>
                     </div>
                 </section>
 
@@ -73,14 +84,15 @@
 
                 <section class="caja-0">
                     <div class="article-body">
-                        <h2 class="article-body-title1">Busca tu localidad</h2>
-                        <p class="article-body-p1">Conoce más sobre los usos de las diferentes tecnoligías en tu región</p>
+                        <h2 class="article-body-title1">Localidad</h2>
+                        <p class="article-body-p1"></p>
                     </div>
-                    <div class="comentarios">
-                        <input type="text" id="buscar" placeholder="Localidad">
-                        <input type="submit" value="Buscar" id="botones">
+                    <div>
+                        <img id="imgBandera" src="http://www.tamaulipas.gob.mx/fomentocivico/wp-content/uploads/sites/20/2017/04/bandera-mexico-portavox-e1492461746506.jpg">
                     </div>
-
+                    <div>
+                        <label>Nombre del país</label>
+                    </div>
                 </section>
             </section>
 
