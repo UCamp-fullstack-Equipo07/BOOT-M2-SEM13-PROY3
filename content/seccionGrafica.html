@@ -44,7 +44,7 @@
             <div class="wrap">
                 <div class="search">
                     <input id="ciudad" type="text" class="searchTerm" placeholder="Lugar de destino...">
-                    <button type="submit" class="searchButton" id="boton" onclick="banderas()">
+                    <button type="submit" class="searchButton" id="boton" onclick="getDatafromAPI()">
                      <i class="fa fa-search"></i>
                   </button>
                 </div>
@@ -58,7 +58,7 @@
                         <p class="article-body-p1">Análisis según el mes del año</p>
                     </div>
                     <div id="grafica-1">
-                        <canvas id="myChart"></canvas>
+                        <!-- <canvas id="myChart"></canvas> -->
                     </div>
                 </section>
 
@@ -68,7 +68,7 @@
                         <p class="article-body-p1">Estadisticas por mes</p>
                     </div>
                     <div id="grafica-2">
-                        <canvas id="myChartPre"></canvas>
+                        <!-- <canvas id="myChartPre"></canvas> -->
                     </div>
                 </section>
 
@@ -118,7 +118,6 @@
     <script src="../app.js"></script>
     <script src="../JS/menuJS.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly" defer></script>
 </body>
 
 </html>
