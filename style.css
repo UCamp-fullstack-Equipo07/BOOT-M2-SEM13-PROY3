@@ -725,6 +725,26 @@ header a:hover {
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+
+    .cajas {
+        margin: 0% auto;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .search {
+        margin: 0% auto;
+        right: 60px;
+        margin-top: 70px;
+        width: 250px;
+    }
+
+    #pEncabezado {
+        font-size: 1em;
+        background-color: #34495E;
+        height: 100px;
+    }
+
 }
 
 /*ajuste de la bandera*/
