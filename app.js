@@ -591,8 +591,8 @@ const getData = async(cityfromSpanish) => {
 const setGraph = (weather) => {
 
     const wLabels = Object.keys(weather);
-    const wTempMin = Object.values(weather).map(item => item.tMin);
-    const wTempMax = Object.values(weather).map(item => item.tMax);
+    const wTempMax = Object.values(weather).map(item => item.tMin);
+    const wTempMin = Object.values(weather).map(item => item.tMax);
     const wTempAvg = Object.values(weather).map(item => item.tAvg);
 
     const wPreMin = Object.values(weather).map(item => item.pMin);
@@ -602,28 +602,28 @@ const setGraph = (weather) => {
     const wTempData = {
         labels: wLabels,
         datasets: [{
-                label: 'Temperatura Minima',
+                label: 'Temp. Minima',
                 data: wTempMin,
-                borderColor: 'red',
-                backgroundColor: 'white',
-            },
-            {
-                label: 'Temperatura Promedio',
-                data: wTempAvg,
                 borderColor: 'blue',
-                backgroundColor: 'white',
+                backgroundColor: 'transparent',
             },
             {
-                label: 'Temperatura Maxima',
-                data: wTempMax,
+                label: 'Temp. Promedio',
+                data: wTempAvg,
                 borderColor: 'yellow',
-                backgroundColor: 'white',
+                backgroundColor: 'transparent',
+            },
+            {
+                label: 'Temp. Maxima',
+                data: wTempMax,
+                borderColor: 'red',
+                backgroundColor: 'transparent',
             }
         ]
     };
 
     const configTempChart = {
-        type: 'line',
+        type: 'radar',
         data: wTempData,
         options: {
             responsive: true,
@@ -632,7 +632,7 @@ const setGraph = (weather) => {
                     position: 'bottom',
                 },
                 title: {
-                    display: true,
+                    display: false,
                     text: 'Chart.js Line Chart'
                 }
             }
@@ -646,36 +646,32 @@ const setGraph = (weather) => {
         configTempChart
     );
 
-    //myChart.destroy();
-
-    
-
     //Precipitation Chart
     const wPreData = {
         labels: wLabels,
         datasets: [{
-                label: 'Precipitacion Minima',
+                label: 'PP Minima',
                 data: wPreMin,
-                borderColor: 'red',
-                backgroundColor: 'white',
-            },
-            {
-                label: 'Precipitacion Promedio',
-                data: wPreAvg,
                 borderColor: 'blue',
-                backgroundColor: 'white',
+                backgroundColor: 'transparent',
             },
             {
-                label: 'Precipitacion Maxima',
-                data: wPreMax,
+                label: 'PP Promedio',
+                data: wPreAvg,
                 borderColor: 'yellow',
-                backgroundColor: 'white',
+                backgroundColor: 'transparent',
+            },
+            {
+                label: 'PP Maxima',
+                data: wPreMax,
+                borderColor: 'red',
+                backgroundColor: 'transparent',
             }
         ]
     };
 
     const configPreChart = {
-        type: 'line',
+        type: 'radar',
         data: wPreData,
         options: {
             responsive: true,
@@ -684,7 +680,7 @@ const setGraph = (weather) => {
                     position: 'bottom',
                 },
                 title: {
-                    display: true,
+                    display: false,
                     text: 'Chart.js Line Chart'
                 }
             }
@@ -697,11 +693,7 @@ const setGraph = (weather) => {
         document.getElementById('myChartPre'),
         configPreChart
     );
-
-    //myPreChart.destroy();
-
-    
-    
+  
 }
 
 /*Banderas*/
@@ -783,6 +775,8 @@ function getDatafromAPI(){
     let cityfromSpanish = arryCountries.indexOf(city.value.toLowerCase());
 
     let cityfromSpanish_api2 = arryCountries_api2.indexOf(city.value.toLowerCase());
+
+    city.value = '';
 
     getData(cityfromSpanish);
     flags(cityfromSpanish_api2);
