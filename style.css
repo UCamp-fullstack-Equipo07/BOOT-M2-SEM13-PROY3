@@ -102,8 +102,11 @@ header a:hover {
     margin: 0% auto;
 }
 
+
 /*Graph styles*/
-#grafica-1, #grafica-2 {
+
+#grafica-1,
+#grafica-2 {
     position: relative;
     margin: auto;
     height: 32rem;
@@ -171,7 +174,6 @@ header a:hover {
     padding: 0;
     width: 400%;
     object-fit: contain;
-    
     animation: cambio 15s infinite;
     animation-direction: alternate;
     animation-timing-function: ease-in;
@@ -735,63 +737,66 @@ header a:hover {
     margin-top: 5%;
 }
 
+
 /*Warning styles*/
-.warning-container{
+
+.warning-container {
     display: none;
-    background: rgb(255, 255, 0,.1);
+    background: rgb(255, 255, 0, .1);
     padding: 1rem;
     margin: 1rem 0;
     border-radius: 0.5rem;
-  }
-  
-  .warning-content{
+}
+
+.warning-content {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     padding-top: 50px;
-  }
-  
-  .warning-icon-svg{
+}
+
+.warning-icon-svg {
     width: 1.25rem;
     height: 1.25rem;
-    color: rgba(251,191,36,1);
-  }
-  
-  .warning-text{
+    color: rgba(251, 191, 36, 1);
+}
+
+.warning-text {
     margin-left: 0.75rem;
-  }
-  
-  .warning-text h3{
+}
+
+.warning-text h3 {
     font-size: .875rem;
     line-height: 1.25rem;
-    color: rgba(146,64,14,1);
+    color: rgba(146, 64, 14, 1);
     white-space: nowrap;
-  }
-  
-  .warning-container-void{
+}
+
+.warning-container-void {
     display: block;
     height: 300px;
-  }
-
-  /*Render Electricity Icons*/
-  #electricity{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      padding: 3rem;
-  }
+}
 
 
-  #voltage-frequency{
+/*Render Electricity Icons*/
+
+#electricity {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+#voltage-frequency {
     float: left;
     margin: 0 20px 20px 0;
     text-align: center;
     font-weight: bold;
     width: 120px;
     height: 120px;
-    background: rgb(14,48,76);
+    background: rgb(14, 48, 76);
     width: 6.5rem;
     height: 6.5rem;
     border-radius: 0.5rem;
@@ -806,7 +811,7 @@ header a:hover {
     margin: 17px 0 0 0;
 }
 
-  #plug {
+#plug {
     float: left;
     margin: 0 20px 20px 0;
     text-align: center;
@@ -818,6 +823,7 @@ header a:hover {
     height: 6.5rem;
     margin: 5px 0 0 0;
 }
+
 
 /* RESPONSIVE ELEMENTS */
 
@@ -854,31 +860,26 @@ header a:hover {
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
-
     .cajas {
         margin: 0% auto;
         display: flex;
         flex-direction: column-reverse;
         max-height: none;
     }
-
     .caja-0 {
         width: 100%;
     }
-    
     .search {
         margin: 0% auto;
         right: 60px;
         margin-top: 70px;
         width: 250px;
     }
-
     #pEncabezado {
         font-size: 1em;
         background-color: #34495E;
         height: 100px;
     }
-
     /*Footer Section*/
     .footer {
         width: 100%;
@@ -886,33 +887,26 @@ header a:hover {
         height: 260px;
         padding: 0%;
     }
-
     .footer_grid {
         display: grid;
-        grid-template-areas: 
-            "item-01 item-01 item-01"
-            "item-03  item-02 item-04";
+        grid-template-areas: "item-01 item-01 item-01" "item-03  item-02 item-04";
         grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;  
+        grid-template-columns: 1fr 1fr 1fr;
     }
-
     .footer_image {
         height: 60px;
         width: 60px;
         padding: auto;
     }
-
     .fa-github {
         width: 60px;
         height: 60px;
         padding: auto;
     }
-    
     .footer_h1 {
         font-size: 1.15rem;
         padding-top: 0%;
     }
-
     .footer_grid-item {
         display: flex;
         flex-direction: column;
@@ -921,50 +915,89 @@ header a:hover {
         justify-content: center;
         align-items: center;
     }
-
     #grid-item-01 {
         grid-area: item-01;
     }
-
     #grid-item-02 {
         grid-area: item-02;
     }
-
     #grid-item-03 {
         grid-area: item-03;
     }
-
     #grid-item-04 {
         grid-area: item-04;
     }
-
-    #grid-item-04 > p {
+    #grid-item-04>p {
         display: none;
     }
-
+    /*GRAPHICS adjusment -STEPH*/
+    #grafica-2 {
+        width: 250px;
+        height: 300px;
+    }
+    #grafica-1 {
+        width: 250px;
+        height: 300px;
+    }
+    #electricity {
+        display: flex;
+        flex-direction: column;
+    }
 }
+
 
 /*ajuste de la bandera*/
-#bandera-ver{
+
+#bandera-ver {
     margin: 3%;
 }
-#ban img{
+
+#ban img {
     width: 95%;
     height: 50%;
 }
 
+
 /*slider*/
 
 @keyframes cambio {
-    0% {margin-left: 0;}
-    20% {margin-left: 0;}
+    0% {
+        margin-left: 0;
+    }
+    20% {
+        margin-left: 0;
+    }
+    25% {
+        margin-left: -100%;
+    }
+    45% {
+        margin-left: -100%;
+    }
+    50% {
+        margin-left: -200%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    75% {
+        margin-left: -300%;
+    }
+    100% {
+        margin-left: -300%;
+    }
+}
 
-    25% {margin-left: -100%;}
-    45% {margin-left: -100%;}
 
-    50% {margin-left: -200%;}
-    70% {margin-left: -200%;}
+/* AJUSTES GRÁFICAS STEPH*/
 
-    75% {margin-left: -300%;}
-    100% {margin-left: -300%;}
+#grafica-2 {
+    position: relative;
+    width: 470px;
+    height: 500px;
+}
+
+#grafica-1 {
+    position: relative;
+    width: 470px;
+    height: 500px;
 }

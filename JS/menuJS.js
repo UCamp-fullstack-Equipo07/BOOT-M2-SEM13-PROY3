@@ -14,3 +14,7 @@ function closeMenu() {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
 }
+
+// button onCLick
+
+document.getElementById("irApi").onclick = function() { location.href = './content/seccionGrafica.html'; };
