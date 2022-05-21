@@ -44,7 +44,7 @@
             <div class="wrap">
                 <div class="search">
                     <input id="ciudad" type="text" class="searchTerm" placeholder="Lugar de destino...">
-                    <button type="submit" class="searchButton" id="boton" onclick="getDatafromAPI()">
+                    <button type="submit" class="searchButton" id="boton">
                      <i class="fa fa-search"></i>
                   </button>
                 </div>
@@ -57,16 +57,14 @@
                         <h2 class="article-body-title1">Temperatura</h2>
                         <p class="article-body-p1">Análisis según el mes del año (C).</p>
                     </div>
-                    <div id="grafica-1">
-                    </div>
+                    <div id="grafica-1"></div>
                 </section>
 
                 <section class="caja-2">
                     <div class="article-body">
                         <h2 class="article-body-title1">Precipitaciones</h2>
                         <p class="article-body-p1">Estadisticas por mes (mm).</p>
-                    </div>
-                    <div id="grafica-2">
+                    </div><div id="grafica-2">
                     </div>
                 </section>
 
@@ -82,15 +80,11 @@
                 </section>
 
                 <section class="caja-0">
-                    <div class="article-body">
+                    <div class="article-body-caja0">
                         <h2 class="article-body-title1">Localidad</h2>
                         <p class="article-body-p1"></p>
                     </div>
-                    <div id="bandera-ver">
-                    
-                       
-                    </div>
-               
+                    <div id="bandera-ver"></div>
                 </section>
 
                 <section class="caja-slider">
@@ -129,7 +123,7 @@
 
     </footer>
 
-    <script src="../app.js"></script>
+    <script src="../app.js" type="module"></script>
     <script src="../JS/menuJS.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
 </body>
