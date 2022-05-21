@@ -711,6 +711,7 @@ header a:hover {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    padding-top: 50px;
   }
   
   .warning-icon-svg{
@@ -788,6 +789,69 @@ header a:hover {
         font-size: 1em;
         background-color: #34495E;
         height: 100px;
+    }
+
+    /*Footer Section*/
+    .footer {
+        width: 100%;
+        margin: 0%;
+        height: 260px;
+        padding: 0%;
+    }
+
+    .footer_grid {
+        display: grid;
+        grid-template-areas: 
+            "item-01 item-01 item-01"
+            "item-03  item-02 item-04";
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;  
+    }
+
+    .footer_image {
+        height: 60px;
+        width: 60px;
+        padding: auto;
+    }
+
+    .fa-github {
+        width: 60px;
+        height: 60px;
+        padding: auto;
+    }
+    
+    .footer_h1 {
+        font-size: 1.15rem;
+        padding-top: 0%;
+    }
+
+    .footer_grid-item {
+        display: flex;
+        flex-direction: column;
+        background-color: none;
+        padding-top: 2%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #grid-item-01 {
+        grid-area: item-01;
+    }
+
+    #grid-item-02 {
+        grid-area: item-02;
+    }
+
+    #grid-item-03 {
+        grid-area: item-03;
+    }
+
+    #grid-item-04 {
+        grid-area: item-04;
+    }
+
+    #grid-item-04 > p {
+        display: none;
     }
 
 }

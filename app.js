@@ -580,6 +580,7 @@ const getData = async(cityfromSpanish) => {
         const url = `https://travelbriefing.org/${citytoEnglish === '' ? 'mexico' : citytoEnglish}?format=json`;
         const res = await fetch(url);
         const data = await res.json();
+        console.log(data.maps)
         setGraph(data.weather);
     }
 
@@ -782,9 +783,14 @@ function getDatafromAPI(){
     let cityfromSpanish = arryCountries.indexOf(city.value.toLowerCase());
 
     let cityfromSpanish_api2 = arryCountries_api2.indexOf(city.value.toLowerCase());
-    console.log(cityfromSpanish_api2)
+
     getData(cityfromSpanish);
     flags(cityfromSpanish_api2);
 }
 
-getDatafromAPI();
+function initialLoad(){
+    city.value = 'mexico';
+    getDatafromAPI();
+}
+
+initialLoad();
