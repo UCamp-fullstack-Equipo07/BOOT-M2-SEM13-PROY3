@@ -89,7 +89,7 @@ const getData = async(cityfromSpanish) => {
 
 
 }
-
+//GRAFICA
 const setGraph = (weather, electricity) => {
 
     const wLabels = Object.keys(weather);
@@ -205,7 +205,7 @@ const setGraph = (weather, electricity) => {
         });
 }
 
-/*Banderas*/
+//Banderas y Datos
 const flags = async (cityfromSpanish) => {
 
     if (cityfromSpanish === -1){
